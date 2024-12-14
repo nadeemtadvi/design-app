@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shami Darbar</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              backgroundcolor: "#ffffff",
+              defaultcolor: "#686868",
+              headingcolor: "#303030",
+              // accentcolor: "#f89412",
+              accentcolor: "#ff7b1a",
+              surfacecolor: "#ffffff",
+              contrastcolor: "#ffffff",
+            },
+            fonts: {
+              defaultfont: ["Roboto", "system-ui", "-apple-system"],
+              headingfont: ["Raleway", "sans-serif"],
+              navfont: ["Poppins", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <main>
+      <!-- Navbar start -->
+      <header class="">
+        <div class="max-w-screen-xl mx-auto mb-6 md:mb-12">
+          <div class="p-3 flex justify-between items-center w-full">
+            <div class="text-headingcolor font-medium text-[1.26rem]">
+              <img
+                src="./assets/images/Logo.png"
+                alt="logo"
+                class="w-[168px]"
+              />
+            </div>
+            <div class="md:block hidden">
+              <ul
+                class="text-defaultcolor flex gap-10 font-normal text-[1.12rem]"
+              >
+                <li>Menu</li>
+                <li>About</li>
+                <li>Gallery</li>
+                <li>Events</li>
+                <li>Contact</li>
+              </ul>
+            </div>
+            <button
+              class="font-normal text-[1.12rem] rounded-tl-[10px] rounded-br-[10px] bg-accentcolor text-white p-[4px_24px_6px]"
+            >
+              Book a Table
+            </button>
+            <div class="relative md:hidden">
+              <button
+                id="dropdown-toggle"
+                class="text-defaultcolor font-normal text-[1.12rem]"
+                aria-expanded="false"
+              >
+                <i class="ri-menu-5-fill text-[1.62rem]"></i>
+              </button>
+              <div
+                id="dropdown-backdrop"
+                class="hidden fixed inset-0 bg-black bg-opacity-50 z-10"
+              ></div>
+              <ul
+                id="dropdown-menu"
+                class="z-20 shadow-[rgba(0,0,0,0.25)_0px_14px_28px,rgba(0,0,0,0.22)_0px_10px_10px] absolute w-[120px] top-10 right-0 hidden bg-white rounded-lg py-2 text-defaultcolor text-[1.12rem] font-normal"
+              >
+                <li class="px-4 pb-2 hover:bg-gray-100">Menu</li>
+                <li class="px-4 pb-2 hover:bg-gray-100">About</li>
+                <li class="px-4 pb-2 hover:bg-gray-100">Gallery</li>
+                <li class="px-4 pb-2 hover:bg-gray-100">Events</li>
+                <li class="px-4 pb-2 hover:bg-gray-100">Contact</li>
+              </ul>
+            </div>
+            
+          </div>
+        </div>
+      </header>
+
+      <!-- Navbar end -->
+      <!-- Hero Section start -->
+      <section class="max-w-screen-xl mx-auto mb-6 md:mb-12">
+        <div class="p-3 md:grid grid-cols-2">
+          <div>
+            <h1 class="font-semibold">
+              Taste Beyond
+              <span class="text-accentcolor">Imagination,</span> Joy in Every
+              Bite
+            </h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint
+              odio nam voluptatum pariatur cumque mollitia quos fugit et ipsum
+              eaque necessitatibus, atque temporibus aliquid minus porro facilis
+              cum fugiat recusandae!
+            </p>
+            <div class="flex gap-5 items-center">
+              <button
+                class="font-normal text-[1.12rem] rounded-tl-[10px] rounded-br-[10px] bg-accentcolor text-white p-[4px_24px_6px]"
+              >
+                Order Now
+              </button>
+              <button
+                class="inline-block font-normal text-[1.12rem] text-defaultcolor flex items-center"
+              >
+                <span
+                  class="w-[36px] h-[36px] flex items-center justify-center rounded-full shadow-[rgba(0,0,0,0.19)_0px_10px_20px,rgba(0,0,0,0.23)_0px_6px_6px]"
+                >
+                  <i class="ri-play-fill pl-[2.5px] pt-[1px] text-black"></i>
+                </span>
+                <span class="ml-3">Watch Now</span>
+              </button>
+            </div>
+          </div>
+          <div class="flex items-center justify-center mt-8 md:mt-0">
+            <img
+              src="./assets/images/main02.png"
+              alt="biryani"
+              class="w-[360px]"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- Hero Section end -->
+      <!-- About Section start -->
+      <section class="max-w-screen-xl mx-auto mb-6 md:mb-12">
+        <div class="p-3 md:grid grid-cols-2">
+          <div class="flex items-center justify-center">
+            <div
+              class="w-[300px] h-[300px] rounded-full overflow-hidden mb-8 md:mb-0"
+            >
+              <img
+                src="./assets/images/cutting.jpg"
+                alt="vegetable cutting"
+                class="object-cover h-[300px]"
+              />
+            </div>
+          </div>
+          <div>
+            <h2 class="!mb-1 heading !text-[1.4rem] md:w-[64%] lg:w-[54%]">
+              About us
+            </h2>
+            <h2 class="capitalize">
+              Our <span class="text-accentcolor">Flavorful</span> Journey
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+              accusantium repellendus asperiores, assumenda nihil, soluta
+              exercitationem quisquam eligendi eius beatae eum fuga rerum optio
+              quia ratione odit, quo consequatur necessitatibus. Corporis at
+              facilis pariatur fugit.
+            </p>
+            <button
+              class="font-normal text-[1.12rem] rounded-tl-[10px] rounded-br-[10px] bg-accentcolor text-white p-[4px_24px_6px]"
+            >
+              Order Now
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- About Section end -->
+      <!-- Menu Section start -->
+      <section class="max-w-screen-xl mx-auto mb-6 md:mb-12">
+        <div class="p-3 bg-white md:bg-transparent">
+          <div class="text-center mb-8">
+            <div class="flex justify-center items-center">
+              <h2
+                class="!mb-1 uppercase heading-both !text-[0.84rem] w-[300px] text-accentcolor"
+              >
+                Special Dishes
+              </h2>
+            </div>
+            <h2 class="capitalize">
+              Special <span class="text-accentcolor">Dishes</span> From Our Menu
+            </h2>
+          </div>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide bg-white">
+                <div
+                  class="m-4 rounded-[10px] overflow-hidden shadow-[rgba(0,0,0,0.15)_0px_5px_15px_0px] relative"
+                >
+                  <div class="p-3">
+                    <div
+                      class="p-2 h-[180px] mb-4 flex items-center justify-center"
+                    >
+                      <img
+                        src="./assets/images/pngwing.com (1).png"
+                        alt=""
+                        class="w-[200px]"
+                      />
+                    </div>
+                    <div>
+                      <h4 class="!text-[1.25rem] !mb-0 !leading-[30px]">
+                        Special Dhali
+                      </h4>
+                      <p class="!text-[0.84rem]">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Explicabo, tempora est aperiam maxime consequuntur
+                        tempore dolorum eligendi.
+                      </p>
+                      <div class="flex items-center justify-center mb-3">
+                        <div class="flex gap-1 items-center text-accentcolor">
+                          <i class="ri-star-s-fill"></i>
+                          <i class="ri-star-s-fill"></i>
+                          <i class="ri-star-s-fill"></i>
+                          <i class="ri-star-s-fill"></i>
+                          <i class="ri-star-s-fill"></i>
+                        </div>
+                      </div>
+                      <div class="flex justify-between items-center">
+                        <p
+                          class="font-semibold !mb-0 !text-[1.25rem] !text-headingcolor"
+                        >
+                          <span class="text-accentcolor">$</span>
+                          20.00
+                        </p>
+                        <button
+                          class="font-normal text-[0.86rem] rounded-tl-[10px] rounded-br-[10px] bg-accentcolor text-white p-[2px_18px_4px]"
+                        >
+                          Add to Card
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="absolute w-[45px] h-[45px] rounded-full bg-accentcolor text-white top-[-10px] right-[-10px]"
+                  >
+                    <div class="w-full h-full relative">
+                      <i
+                        class="ri-heart-fill text-[14px] absolute bottom-[7px] left-[12px]"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide bg-white">
+                <div
+                  class="m-4 rounded-[10px] overflow-hidden shadow-[rgba(0,0,0,0.15)_0px_5px_15px_0px] relative"
+                >
+                  <div class="p-3">
+                    <div
+                      class="p-2 h-[180px] mb-4 flex items-center justify-center"
+                    >
+                      <img
+                        src="./assets/images/pngwing.com (2).png"
+                        alt=""
+                        class="w-[200px]"
+                      />
+                    </div>
+                    <div>
+                      <h4 class="!text-[1.25rem] !mb-0 !leading-[30px]">
+                        Red Curry Special
+                      </h4>
+                      <p class="!text-[0.84rem]">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Explicabo, tempora est aperiam maxime consequuntur
+                        tempore dolorum eligendi.
+                      </p>
+                      <div class="flex items-center justify-center mb-3">
+                        <div class="flex gap-1 items-center text-accentcolor">
+                          <i class="ri-star-s-fill"></i>
+                          <i class="ri-star-s-fill"></i>
+                          <i class="ri-star-s-fill"></i>
+                          <i class="ri-star-s-fill"></i>
+                          <i class="ri-star-s-fill"></i>
+                        </div>
+                      </div>
+                      <div class="flex justify-between items-center">
+                        <p
+                          class="font-semibold !mb-0 !text-[1.25rem] !text-headingcolor"
+                        >
+                          <span class="text-accentcolor">$</span>
+                          20.00
+                        </p>
+                        <button
+                          class="font-normal text-[0.86rem] rounded-tl-[10px] rounded-br-[10px] bg-accentcolor text-white p-[2px_18px_4px]"
+                        >
+                          Add to Card
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="absolute w-[45px] h-[45px] rounded-full bg-accentcolor text-white top-[-10px] right-[-10px]"
+                  >
+                    <div class="w-full h-full relative">
+                      <i
+                        class="ri-heart-fill text-[14px] absolute bottom-[7px] left-[12px]"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide bg-white">
+                <div
+                  class="m-4 rounded-[10px] overflow-hidden shadow-[rgba(0,0,0,0.15)_0px_5px_15px_0px] relative"
+                >
+                  <div class="p-3">
+                    <div
+                      class="p-2 h-[180px] mb-4 flex items-center justify-center"
+                    >
+                      <img
+                        src="./assets/images/pngwing.com (3).png"
+                        alt=""
+                        class="w-[200px]"
+                      />
+                    </div>
+                    <div>
+                      <h4 class="!text-[1.25rem] !mb-0 !leading-[30px]">
+                        Veggie Curry
+                      </h4>
+                      <p class="!text-[0.84rem]">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Explicabo, tempora est aperiam maxime consequuntur
+                        tempore dolorum eligendi.
+                      </p>
+                      <div class="flex items-center justify-center mb-3">
+                        <div class="flex gap-1 items-center text-accentcolor">
+                          <i class="ri-star-s-fill"></i>
+                          <i class="ri-star-s-fill"></i>
+                          <i class="ri-star-s-fill"></i>
+                          <i class="ri-star-s-fill"></i>
+                          <i class="ri-star-s-fill"></i>
+                        </div>
+                      </div>
+                      <div class="flex justify-between items-center">
+                        <p
+                          class="font-semibold !mb-0 !text-[1.25rem] !text-headingcolor"
+                        >
+                          <span class="text-accentcolor">$</span>
+                          20.00
+                        </p>
+                        <button
+                          class="font-normal text-[0.86rem] rounded-tl-[10px] rounded-br-[10px] bg-accentcolor text-white p-[2px_18px_4px]"
+                        >
+                          Add to Card
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="absolute w-[45px] h-[45px] rounded-full bg-accentcolor text-white top-[-10px] right-[-10px]"
+                  >
+                    <div class="w-full h-full relative">
+                      <i
+                        class="ri-heart-fill text-[14px] absolute bottom-[7px] left-[12px]"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide bg-white">
+                <div
+                  class="m-4 rounded-[10px] overflow-hidden shadow-[rgba(0,0,0,0.15)_0px_5px_15px_0px] relative"
+                >
+                  <div class="p-3">
+                    <div
+                      class="p-2 h-[180px] mb-4 flex items-center justify-center"
+                    >
+                      <img
+                        src="./assets/images/pngwing.com.png"
+                        alt=""
+                        class="w-[200px]"
+                      />
+                    </div>
+                    <div>
+                      <h4 class="!text-[1.25rem] !mb-0 !leading-[30px]">
+                        Hyderabadi Biryani
+                      </h4>
+                      <p class="!text-[0.84rem]">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Explicabo, tempora est aperiam maxime consequuntur
+                        tempore dolorum eligendi.
+                      </p>
+                      <div class="flex items-center justify-center mb-3">
+                        <div class="flex gap-1 items-center text-accentcolor">
+                          <i class="ri-star-s-fill"></i>
+                          <i class="ri-star-s-fill"></i>
+                          <i class="ri-star-s-fill"></i>
+                          <i class="ri-star-s-fill"></i>
+                          <i class="ri-star-s-fill"></i>
+                        </div>
+                      </div>
+                      <div class="flex justify-between items-center">
+                        <p
+                          class="font-semibold !mb-0 !text-[1.25rem] !text-headingcolor"
+                        >
+                          <span class="text-accentcolor">$</span>
+                          20.00
+                        </p>
+                        <button
+                          class="font-normal text-[0.86rem] rounded-tl-[10px] rounded-br-[10px] bg-accentcolor text-white p-[2px_18px_4px]"
+                        >
+                          Add to Card
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="absolute w-[45px] h-[45px] rounded-full bg-accentcolor text-white top-[-10px] right-[-10px]"
+                  >
+                    <div class="w-full h-full relative">
+                      <i
+                        class="ri-heart-fill text-[14px] absolute bottom-[7px] left-[12px]"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide bg-white">
+                <div
+                  class="m-4 rounded-[10px] overflow-hidden shadow-[rgba(0,0,0,0.15)_0px_5px_15px_0px] relative"
+                >
+                  <div class="p-3">
+                    <div
+                      class="p-2 h-[180px] mb-4 flex items-center justify-center"
+                    >
+                      <img
+                        src="./assets/images/pngwing.com (4) (1).png"
+                        alt=""
+                        class="w-[200px]"
+                      />
+                    </div>
+                    <div>
+                      <h4 class="!text-[1.25rem] !mb-0 !leading-[30px]">
+                        Shahi Biryani
+                      </h4>
+                      <p class="!text-[0.84rem]">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Explicabo, tempora est aperiam maxime consequuntur
+                        tempore dolorum eligendi.
+                      </p>
+                      <div class="flex items-center justify-center mb-3">
+                        <div class="flex gap-1 items-center text-accentcolor">
+                          <i class="ri-star-s-fill"></i>
+                          <i class="ri-star-s-fill"></i>
+                          <i class="ri-star-s-fill"></i>
+                          <i class="ri-star-s-fill"></i>
+                          <i class="ri-star-s-fill"></i>
+                        </div>
+                      </div>
+                      <div class="flex justify-between items-center">
+                        <p
+                          class="font-semibold !mb-0 !text-[1.25rem] !text-headingcolor"
+                        >
+                          <span class="text-accentcolor">$</span>
+                          20.00
+                        </p>
+                        <button
+                          class="font-normal text-[0.86rem] rounded-tl-[10px] rounded-br-[10px] bg-accentcolor text-white p-[2px_18px_4px]"
+                        >
+                          Add to Card
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="absolute w-[45px] h-[45px] rounded-full bg-accentcolor text-white top-[-10px] right-[-10px]"
+                  >
+                    <div class="w-full h-full relative">
+                      <i
+                        class="ri-heart-fill text-[14px] absolute bottom-[7px] left-[12px]"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <!-- Menu Section end -->
+      <!-- Testimonials Section start -->
+      <section class="max-w-screen-xl mx-auto mb-6 md:mb-12">
+        <div class="p-3 md:grid grid-cols-2">
+          <div>
+            <h2 class="!mb-0 uppercase !text-[1rem] text-accentcolor">
+              Testimonials
+            </h2>
+            <h2 class="capitalize">Words of Joy</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+              accusantium repellendus asperiores, assumenda nihil, soluta
+              exercitationem quisquam eligendi eius beatae eum fuga rerum optio
+              quia ratione odit, quo consequatur necessitatibus. Corporis at
+              facilis pariatur fugit.
+            </p>
+            <div class="sm:flex items-center gap-6">
+              <div>
+                <div class="flex -space-x-4 rtl:space-x-reverse">
+                  <img
+                    class="w-14 h-14 border-[3px] border-white rounded-full dark:border-gray-800"
+                    src="./assets/images/man01.jpg"
+                    alt=""
+                  />
+                  <img
+                    class="w-14 h-14 border-[3px] border-white rounded-full dark:border-gray-800"
+                    src="./assets/images/woman01.jpg"
+                    alt=""
+                  />
+                  <img
+                    class="w-14 h-14 border-[3px] border-white rounded-full dark:border-gray-800"
+                    src="./assets/images/man02.jpg"
+                    alt=""
+                  />
+                  <img
+                    class="w-14 h-14 border-[3px] border-white rounded-full dark:border-gray-800"
+                    src="./assets/images/woman02.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div>
+                <h4 class="!text-[1.2rem] !mb-0 !leading-[30px]">
+                  Customer Feedback
+                </h4>
+                <p class="!mb-0">
+                  <i class="ri-star-s-fill text-[#FFF100] !text-[18px]"></i>
+                  <span class="!text-headingcolor !font-semibold">4.9</span>
+                  (2.2k Reviews)
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center justify-center">
+            <img src="./assets/images/chef.png" alt="" class="w-[260px]" />
+          </div>
+        </div>
+      </section>
+      <!-- Testimonials Section end -->
+      <!-- Contact Section start -->
+      <section class="max-w-screen-xl mx-auto mb-6 md:mb-12">
+        <div class="p-3">
+          <div class="md:max-w-screen-sm mx-auto">
+            <div class="text-center">
+              <h2 class="">Get in Touch</h2>
+              <p>
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Incidunt accusantium quo consequatur necessitatibus. Corporis at
+                facilis pariatur fugit."
+              </p>
+
+              <form class="md:mx-[4.5rem] mx-[2rem]">
+                <div class="relative">
+                  <input
+                    placeholder="Enter your email"
+                    type="text"
+                    id="search"
+                    class="block w-full p-4 text-[0.9rem] text-gray-900 border border-gray-300 rounded-[8px] bg-gray-50 focus:ring-accentcolor focus:border-accentcolor"
+                    required
+                  />
+                  <button
+                    type="submit"
+                    class="text-white absolute end-2.5 bottom-2.5 bg-accentcolor hover:bg-accentcolor focus:ring-4 focus:outline-none focus:accentcolor font-medium rounded-[8px] text-[0.9rem] px-6 py-2"
+                  >
+                    Subscribe
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contact Section end -->
+      <!-- Footer Section start -->
+      <footer class="max-w-screen-xl mx-auto mb-6 md:mb-12">
+        <div class="p-3">
+          <div class="grid grid-cols-3 md:grid-cols-[48%_auto_auto_auto]">
+            <div class="col-span-4 md:col-span-1">
+              <!-- logo -->
+              <img
+                src="./assets//images/Logo.png"
+                alt="logo"
+                class="mb-4 w-[260px]"
+              />
+
+              <p class="md:w-[80%]">
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Incidunt accusantium quo consequatur necessitatibus. Corporis at
+                facilisrt pariatur fugit. Incidunt accusantium quo consequatur
+                necessits. Corporis at facilis pariatur fugit."
+              </p>
+            </div>
+            <div>
+              <h2 class="!mb-1 uppercase !text-[1rem]">Navigation</h2>
+              <ul>
+                <li class="pb-2 text-defaultcolor">Menu</li>
+                <li class="pb-2 text-defaultcolor">About us</li>
+                <li class="pb-2 text-defaultcolor">Gallery</li>
+                <li class="pb-2 text-defaultcolor">Event</li>
+                <li class="pb-2 text-defaultcolor">Contact us</li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="!mb-1 uppercase !text-[1rem]">Dishes</h2>
+              <ul>
+                <li class="pb-2 text-defaultcolor">Biryani vegetarian</li>
+                <li class="pb-2 text-defaultcolor">Fish & rice</li>
+                <li class="pb-2 text-defaultcolor">Chicken Fried</li>
+                <li class="pb-2 text-defaultcolor">Pizza Pasta</li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="!mb-1 uppercase !text-[1rem]">Follow us</h2>
+              <ul class="flex gap-2 items-center">
+                <li
+                  class="w-8 h-8 rounded-full border border-defaultcolor flex items-center justify-center"
+                >
+                  <i class="ri-facebook-fill"></i>
+                </li>
+                <li
+                  class="w-8 h-8 rounded-full border border-defaultcolor flex items-center justify-center"
+                >
+                  <i class="ri-instagram-line"></i>
+                </li>
+                <li
+                  class="w-8 h-8 rounded-full border border-defaultcolor flex items-center justify-center"
+                >
+                  <i class="ri-whatsapp-line"></i>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- Footer Section end -->
+      <!-- Footer Section start -->
+      <div class="max-w-screen-xl mx-auto border-t border-gray-300">
+        <div class="p-3">
+          <div class="flex justify-between items-center">
+            <p class="!mb-0">
+              2024 Restaurants. All Right Reserved Design by
+              <span class="font-semibold">food-cafe</span>
+            </p>
+            <div class="flex gap-4 items-center">
+              <p class="!mb-0">Terms of Service</p>
+              <p class="!mb-0">Privacy Policy</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer Section end -->
+    </main>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="main.js"></script>
+  </body>
+</html>
