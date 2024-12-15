@@ -127,3 +127,16 @@ h6 {
 }
   
 }
+
+
+/* swiper css start */
+.aspect-ratio-1 {
+  aspect-ratio: 1 / 1; /* Ensures the container maintains a square aspect ratio */
+}
+
+
+/* .aspectRatio{
+  aspect-ratio: 1;
+  object-fit: cover;
+} */
+/* swiper css end */

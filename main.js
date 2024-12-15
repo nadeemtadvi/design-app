@@ -1,17 +1,19 @@
 // Swiper slider start
-const swiper = new Swiper(".swiper", {
-  loop: true,
-  autoplay: false,
+const swiper = new Swiper(".swiper2", {
+  // loop: true,
+  speed:700,
+  // autoplay: false,
   slidesPerView: 1,
-  spaceBetween: 5,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
+  spaceBetween: 16,
+  keyboard:true,
+  mousewheel: {
+forceToAxis:true
   },
+ 
   breakpoints: {
-    1100: {
-      slidesPerView: 4,
-      spaceBetween: 10,
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 16,
     },
     890: {
       slidesPerView: 3,
@@ -61,3 +63,43 @@ document.addEventListener('click', (event) => {
 
 // Dropdown Menu end
 
+
+// Swipper with animation start
+
+$(document).ready(function() {
+  $(".slider-main_component").each(function (index) {
+    const swiper = new Swiper($(this).find(".swiper")[0], {
+      slidesPerView: 1,
+      speed: 700,
+      spaceBetween: 16,
+      keyboard: true,
+      mousewheel: {
+        forceToAxis: true
+      },
+      breakpoints: {
+        // when window width is >= 768px
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 16
+        }
+      },
+      navigation: {
+        nextEl: $(this).find(".swiper-next")[0],
+        prevEl: $(this).find(".swiper-prev")[0],
+        disabledClass: "is-disabled"
+      }
+    });
+  });
+});
+
+$(document).ready(function () {
+  // Select all images in Swiper slides
+  $(".swiper-slide img").each(function (index) {
+    // Add the aspect-ratio-1 class to every alternate image
+    if (index % 2 !== 0) {
+      $(this).addClass("aspect-ratio-1");
+    }
+  });
+});
+
+// Swipper with animation end
