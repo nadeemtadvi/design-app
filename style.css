@@ -1,8 +1,8 @@
 :root {
   /* Colors */
   --background-color: #ffffff;
-  --default-color: #686868;
-  --heading-color: #303030;
+  --default-color: #000000;
+  --heading-color: #000000;
   --accent-color: #ff7b1a;
   --surface-color: #ffffff;
   --contrast-color: #ffffff;
@@ -16,24 +16,18 @@
   box-sizing: border-box;
 }
 @font-face {
-  font-family: "Modern";
-  src: url(".assets/fonts/ElegancePearl.otf") format("opentype");
-  font-weight: 300;
+  font-family: "Breath_Demo";
+  src: url("./assets/fonts/Breath_Demo.ttf") format("truetype");
   font-style: normal;
 }
-@font-face {
-  font-family: "Modern";
-  src: url(".assets/fonts/ElegancePearl.otf") format("opentype");
-  font-weight: 300;
-  font-style: normal;
-}
+
 
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
 body {
   color: var(--default-color);
-  font-family: "Modern";
+  font-family: "Breath_Demo";
 }
 
 a {
@@ -62,7 +56,6 @@ h6 {
   color: var(--heading-color);
   margin-bottom: 1rem!important;
   font-size: 2.5rem!important;
-  font-weight: 600!important;
   line-height: 48px!important;
 }
 p {
